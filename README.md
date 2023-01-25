@@ -1,3 +1,3 @@
 # Random Joke App
 
-[!Random-Joke-Gif](Assets/RandomJokeGif.gif)
+![Random-Joke-Gif](Assets/RandomJokeGif.gif)
