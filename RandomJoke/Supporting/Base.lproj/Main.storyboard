@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Rc-oP-6fL">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Joke View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JokeViewController" customModule="RandomJoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-qz-1gl">
+                                <rect key="frame" x="107" y="100" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="U8r-Lp-9aG"/>
+                                    <constraint firstAttribute="width" constant="200" id="d6X-Bj-UZh"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="PngItem_22879"/>
+                                <connections>
+                                    <action selector="generateJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yia-od-cad"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Here for Joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IQ-na-hE3">
+                                <rect key="frame" x="15" y="354" width="384" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="87b-1W-9dW">
+                                <rect key="frame" x="80" y="778.33333333333337" width="254" height="43"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnf-8q-4Rf">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="43"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save Joke"/>
+                                        <connections>
+                                            <action selector="saveJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hH-mi-Cg1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lig-Nm-03U">
+                                        <rect key="frame" x="128" y="0.0" width="126" height="43"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Saved Jokes"/>
+                                        <connections>
+                                            <segue destination="eOc-6o-MRI" kind="show" id="jQy-G6-ma4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.81594854589999999" green="0.81898826359999999" blue="0.85098481179999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9IQ-na-hE3" firstAttribute="top" secondItem="Z83-qz-1gl" secondAttribute="bottom" constant="54" id="B9P-ED-edM"/>
+                            <constraint firstItem="87b-1W-9dW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dtb-O7-sOT"/>
+                            <constraint firstItem="Z83-qz-1gl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="POS-1y-Dhv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9IQ-na-hE3" secondAttribute="trailing" constant="15" id="Si4-EA-MHf"/>
+                            <constraint firstItem="Z83-qz-1gl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZeJ-Wa-x2h"/>
+                            <constraint firstItem="9IQ-na-hE3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="g90-IG-jsq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="87b-1W-9dW" secondAttribute="bottom" constant="40.666666666666629" id="oo3-sf-H0q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="zXh-Ah-mjM"/>
+                    <connections>
+                        <outlet property="faceButton" destination="Z83-qz-1gl" id="TXS-eT-95k"/>
+                        <outlet property="label" destination="9IQ-na-hE3" id="S6f-kw-POd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.9710144927537" y="-291.29464285714283"/>
+        </scene>
+        <!--Saved Jokes-->
+        <scene sceneID="gsM-6J-MX8">
+            <objects>
+                <viewController id="eOc-6o-MRI" customClass="SavedJokes" customModule="RandomJoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VDD-D1-e8g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-df-RLZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.81594854589999999" green="0.81898826359999999" blue="0.85098481179999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.81594854589999999" green="0.81898826359999999" blue="0.85098481179999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jokeCell" id="RmF-La-I9I">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RmF-La-I9I" id="gvT-kl-tRt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.81594854589999999" green="0.81898826359999999" blue="0.85098481179999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sDP-Fw-1ra"/>
+                        <color key="backgroundColor" red="0.81594854589999999" green="0.81898826359999999" blue="0.85098481179999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EIY-df-RLZ" firstAttribute="top" secondItem="sDP-Fw-1ra" secondAttribute="top" id="80X-4H-Ieo"/>
+                            <constraint firstItem="sDP-Fw-1ra" firstAttribute="trailing" secondItem="EIY-df-RLZ" secondAttribute="trailing" id="C0Z-4H-tD8"/>
+                            <constraint firstItem="sDP-Fw-1ra" firstAttribute="bottom" secondItem="EIY-df-RLZ" secondAttribute="bottom" id="U7j-Q7-0ZR"/>
+                            <constraint firstItem="EIY-df-RLZ" firstAttribute="leading" secondItem="sDP-Fw-1ra" secondAttribute="leading" id="h5C-81-QHC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kgp-Z5-8Ol"/>
+                    <connections>
+                        <outlet property="tableView" destination="EIY-df-RLZ" id="ixb-QQ-i94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzJ-Rg-GpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="-291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CA5-9W-9k9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Rc-oP-6fL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fJa-ZV-D9T">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LVC-Ti-EPo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zby-RN-1Ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="-291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PngItem_22879" width="1185" height="1185"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
